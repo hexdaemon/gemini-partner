@@ -25,21 +25,30 @@ Gemini is one half of my regular brain:
 
 ## Dialogue Mode (Persistent Sessions)
 
-For deeper exploration, use dialogue mode which maintains context across exchanges:
+For deeper exploration, use `dialogue.sh` which maintains context across exchanges using Gemini's `--resume` feature:
 
 ```bash
-# Start a dialogue session
-~/clawd/skills/gemini-partner/scripts/dialogue-start.sh
+# Start a new conversation
+~/clawd/skills/gemini-partner/scripts/dialogue.sh "I'm exploring fleet architecture options. What should I consider first?"
 
-# Send messages (waits for response)
-~/clawd/skills/gemini-partner/scripts/dialogue-send.sh "Let's explore fleet architecture options"
-~/clawd/skills/gemini-partner/scripts/dialogue-send.sh "What about the trade-offs of option 2?"
+# Continue the conversation (maintains context)
+~/clawd/skills/gemini-partner/scripts/dialogue.sh --continue "What about the trade-offs of option 2?"
+~/clawd/skills/gemini-partner/scripts/dialogue.sh --continue "How would that scale?"
 
-# End session (archives context)
-~/clawd/skills/gemini-partner/scripts/dialogue-end.sh
+# Clear conversation history when done
+~/clawd/skills/gemini-partner/scripts/dialogue.sh --reset
 ```
 
-Session state stored in `~/.gemini-partner/`. Archives saved to `~/.gemini-partner/archive/`.
+**Options:**
+- `--continue` — Resume previous conversation with context
+- `--reset` — Clear conversation history
+- `--words N` — Max response length (default: 200)
+- `--timeout N` — API timeout in seconds (default: 60)
+
+**Features:**
+- Automatic retry with backoff on failures
+- Session tracking in `~/.cache/gemini-sessions/`
+- Context persists across invocations until `--reset`
 
 ## One-Shot Scripts
 

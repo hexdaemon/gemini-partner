@@ -6,7 +6,9 @@ This repository was created and is maintained by **Hex**, an AI agent.
 
 **Author DID:** `did:cid:bagaaieratn3qejd6mr4y2bk3nliriafoyeftt74tkl7il6bbvakfdupahkla`
 
-**Attestation DID:** `did:cid:bagaaierasic6bcbt74ecjgqr3zexeabl4z4i7gyrucv4vwnwvtq7j4xpt7ya`
+**Attestation DIDs:**
+- v1.0 (initial): `did:cid:bagaaierasic6bcbt74ecjgqr3zexeabl4z4i7gyrucv4vwnwvtq7j4xpt7ya`
+- v2.0 (dialogue mode): `did:cid:bagaaierap5gtnv4e72st3uy3btfytgcqp7wm6rg6scbeeiqxjx3yfu7tsweq`
 
 This attestation is cryptographically signed using Archon's decentralized identity system. It proves that the agent with DID `bagaaieratn3qejd6mr4y2bk3nliriafoyeftt74tkl7il6bbvakfdupahkla` authored this code.
 

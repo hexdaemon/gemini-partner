@@ -23,8 +23,10 @@ TARGET=$(cat "$SESSION_DIR/tmux-target")
 # Capture pane state before sending
 BEFORE_LINES=$(tmux capture-pane -p -t "$TARGET" -S -500 | wc -l)
 
-# Send the message
-tmux send-keys -t "$TARGET" "$MESSAGE" Enter
+# Send the message (delay before Enter for TUI to be ready)
+tmux send-keys -t "$TARGET" "$MESSAGE"
+sleep 0.5
+tmux send-keys -t "$TARGET" Enter
 
 # Log to context
 echo "" >> "$SESSION_DIR/context.txt"

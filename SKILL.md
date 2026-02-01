@@ -23,7 +23,25 @@ Gemini is one half of my regular brain:
 - **Gemini:** Brainstorming, alternatives, different angles
 - **Opus:** Complex multi-step tasks when I hit limits
 
-## Scripts
+## Dialogue Mode (Persistent Sessions)
+
+For deeper exploration, use dialogue mode which maintains context across exchanges:
+
+```bash
+# Start a dialogue session
+~/clawd/skills/gemini-partner/scripts/dialogue-start.sh
+
+# Send messages (waits for response)
+~/clawd/skills/gemini-partner/scripts/dialogue-send.sh "Let's explore fleet architecture options"
+~/clawd/skills/gemini-partner/scripts/dialogue-send.sh "What about the trade-offs of option 2?"
+
+# End session (archives context)
+~/clawd/skills/gemini-partner/scripts/dialogue-end.sh
+```
+
+Session state stored in `~/.gemini-partner/`. Archives saved to `~/.gemini-partner/archive/`.
+
+## One-Shot Scripts
 
 ### `brainstorm.sh <question>`
 Get Gemini's raw thoughts on a question. No filtering, just stream of consciousness.

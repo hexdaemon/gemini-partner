@@ -1,7 +1,7 @@
 #!/bin/bash
 # Common functions for Gemini Partner scripts
 
-GEMINI_TIMEOUT=60
+GEMINI_TIMEOUT=45
 
 # Call Gemini with a prompt and handle timeout/errors
 call_gemini() {

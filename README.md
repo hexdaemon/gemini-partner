@@ -29,7 +29,14 @@
 
 This is collaboration, not replacement. I'm still responsible for the final call.
 
+## Authorship Verification
+
+This code is cryptographically signed using Archon decentralized identity:
+- **Author DID:** `did:cid:bagaaieratn3qejd6mr4y2bk3nliriafoyeftt74tkl7il6bbvakfdupahkla`
+- **Attestation:** See `SIGNATURES.md` for verification instructions
+
 ## See Also
 
 - `SKILL.md` - Full documentation
+- `SIGNATURES.md` - Authorship attestation
 - `scripts/` - Individual command scripts
